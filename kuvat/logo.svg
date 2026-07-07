@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 205 22" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght=700&amp;display=swap');
+      
+      .logo-teksti {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700; /* Lihavoitu (Bold) */
+        font-size: 20px;
+        
+        /* [MUOKATTAVA KOHTA: LOGON TEKSTIN VÄRI] */
+        /* Valkoinen (#ffffff) on valittu, jotta se erottuu projektiohjeen mukaisesta ruohonvihreästä yläpalkista. */
+        fill: #ffffff; 
+      }
+    </style>
+  </defs>
+
+  <text x="0" y="17.5" class="logo-teksti">Veljesten Kesäyritys</text>
+</svg>

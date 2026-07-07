@@ -1,0 +1,389 @@
+/* ==========================================================================
+   CSS-MUUTTUJAT JA VÄRIT (MUOKATTAVISSA)
+   ========================================================================== */
+:root {
+    /* Ruohonvihreä / Sivuston päätehosteväri, jota käytetään yläpalkissa, alatunnisteessa jne. */
+    --primary-color: #2e7d32; 
+    
+    /* Tummanvihreä / Yläpalkin valikon hover-efektit ja tekstien korostukset */
+    --primary-dark: #1b5e20; 
+    
+    /* [UUSI / MUOKATTU] CTA-PAINIKKEEN ORANSSI HUOMIOVÄRI (Entisestä sivustosta) */
+    --cta-color: #f57c00;        /* Ensisijainen oranssi toimintapainikkeen väri */
+    --cta-hover-color: #e65100;  /* Oranssin painikkeen väri kun hiiri viedään päälle (hover) */
+    
+    /* Vaaleanvihreä / Kotitalousvähennyksen infoboksin taustaväri */
+    --light-green-bg: #e8f5e9; 
+    
+    /* Tumma harmaa/musta / Leipätekstin pääväri hyvän kontrastin varmistamiseksi */
+    --text-dark: #212121; 
+    
+    /* Puhdas valkoinen / Hero-osion tekstipuolen tausta ja valikon tekstilinkit */
+    --text-light: #ffffff; 
+    
+    /* Vaalea harmaa / Sivuston yleinen taustaväri tai osioiden erotteluväri */
+    --bg-light: #f9f9f9; 
+    
+    /* Sivuston tekstialueiden ja navigaatiokontin yhtenäinen maksimileveys */
+    --content-max-width: 1100px;
+}
+
+/* ==========================================================================
+   YLEISET TYYLIT JA TYPOGRAFIA
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+    font-size: 16px; /* Peruskoko */
+}
+
+.container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* [UUSI] PARANNETTU LUETTAVUUS SISÄLTÖSIVUILLE (Meistä, Tarjonta, Hinnasto)
+   Nostetaan leipätekstin kokoa 17px/18px luettavuuden parantamiseksi ohjeen mukaisesti */
+.readability-text p, 
+.about-text-column p, 
+.services-pure-text p,
+.container > p {
+    font-size: 17.5px; /* Hieman suurempi ja ilmavampi koko pitkiin teksteihin */
+    margin-bottom: 20px;
+    color: #2b2b2b;
+}
+
+/* ==========================================================================
+   1.1 & 1.2 NAVIGAATIO JA LOGO-ALUE (LUKITTU TEKNIIKKA)
+   ========================================================================== */
+.site-header {
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: relative;
+}
+
+.logo-alue {
+    max-width: 180px;
+    max-height: 50px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-alue img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-menu a {
+    font-size: 18px; /* Kiinteästi 18px ohjeen mukaan */
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 8px 12px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    border-radius: 4px;
+}
+
+.nav-menu a:hover {
+    background-color: var(--primary-dark);
+}
+
+/* CSS Checkbox Hack mobiilivalikolle */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    width: 30px;
+}
+
+.menu-icon span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--text-light);
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+/* ==========================================================================
+   YHTEISET KOMPONENTIT (PAINIKKEET JA INFOLAATIKOT)
+   ========================================================================== */
+/* [MUOKATTU] CTA-painike käyttää nyt omia muuttujiaan, jotka on helppo vaihtaa alussa */
+.cta-button {
+    display: inline-block;
+    background-color: var(--cta-color);
+    color: var(--text-light);
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.cta-button:hover {
+    background-color: var(--cta-hover-color);
+}
+
+.tax-highlight-box {
+    background-color: var(--light-green-bg);
+    border-left: 4px solid var(--primary-color);
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 0 4px 4px 0;
+}
+
+.tax-highlight-box p {
+    font-weight: 600;
+    color: var(--primary-dark);
+    font-size: 16px !important; /* Pidetään infolaatikko kompaktina */
+}
+
+/* ==========================================================================
+   1.4 HERO-OSION SPLIT-LAYOUT -ARKKITEHTUURI
+   ========================================================================== */
+.hero-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 500px;
+    background-color: #ffffff;
+}
+
+.hero-text-side {
+    background-color: #ffffff;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero-text-side h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+}
+
+.hero-text-side .lead-text {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.hero-image-side {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-image-side img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   SIVUKOHTAISET ASETTELUT
+   ========================================================================== */
+/* Meistä-sivun asettelu */
+.about-layout {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.about-text-column {
+    flex: 1;
+}
+
+.about-image-column {
+    width: 400px;
+    height: 300px;
+    flex-shrink: 0;
+}
+
+.about-image-column img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Tarjonta-sivun puhdas typografia */
+.services-pure-text {
+    margin-top: 30px;
+}
+
+.service-block {
+    margin-bottom: 40px;
+}
+
+.service-block h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: var(--primary-dark);
+}
+
+/* Hinnastotaulukko (Leipätekstin suurempi fonttikoko ulotetaan myös taulukkoon) */
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+td {
+    font-size: 17px; /* Luettavampi koko myös hinnoille */
+}
+
+th {
+    background-color: var(--light-green-bg);
+    color: var(--primary-dark);
+    font-weight: bold;
+    font-size: 17px;
+}
+
+/* Yhteystiedot */
+.contact-stacked {
+    margin-top: 30px;
+}
+
+.contact-group {
+    margin-bottom: 35px;
+}
+
+.contact-group p {
+    font-size: 17.5px;
+    margin-bottom: 8px;
+}
+
+.contact-group a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-group a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   2.2 GLOBAALI ALATUNNISTE (FOOTER)
+   ========================================================================== */
+.site-footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.site-footer p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   RESPONSIIVISUUS (MOBIILILAITTEET)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--primary-color);
+        padding: 10px 0;
+        box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+        gap: 0;
+    }
+
+    .nav-menu a {
+        width: 100%;
+        border-radius: 0;
+        padding: 15px 20px;
+    }
+
+    .menu-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    .hero-section {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-text-side {
+        padding: 40px 20px;
+    }
+
+    .hero-image-side {
+        height: 300px;
+    }
+
+    .about-layout {
+        flex-direction: column;
+    }
+
+    .about-image-column {
+        width: 100%;
+        height: 250px;
+    }
+}
