@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- [MUOKATTAVA SISÄLTÖ: Selaimen välilehdessä näkyvä suosikkikuvake eli favicon] 
+         Ohje: Vaihda href-arvo osoittamaan toisen yrityksen favicon-tiedostoon (suositus: SVG-muoto). -->
+    <link rel="icon" type="image/svg+xml" href="kuvat/suosikkikuvake.svg">
+    
+    <!-- [MUOKATTAVA SISÄLTÖ: Sivuston otsikko / Title] 
+         Ohje: Vaihda yrityksen nimi tähän. Tämä näkyy selaimen välilehdessä ja hakutuloksissa. -->
+    <title>Veljesten Kesäyritys</title>
+    
+    <!-- Linkitys globaaliin CSS-tyylitiedostoon -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- YLÄTUNNISTE JA NAVIGAATIO -->
+    <header class="site-header">
+        <div class="nav-container">
+            
+            <!-- [MUOKATTAVA SISÄLTÖ: Yrityksen logo] 
+                 Ohje: Vaihda kuvatiedosto toisen yrityksen logoon. 
+                 Kuvasuhde- ja resoluutiosuositus: Vektorigrafiikka (SVG) tai vaakasuuntainen logo (korkeus n. 40-60px). 
+                 Muista päivittää myös alt-teksti vastaamaan uutta yritystä. -->
+            <div class="logo-alue">
+                <img src="kuvat/logo.svg" alt="Veljesten Kesäyritys Logo">
+            </div>
+
+            <!-- CSS Checkbox Hack -mobiilivalikon kytkin (ei vaadi JavaScriptiä) -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <span></span><span></span><span></span>
+            </label>
+
+            <!-- [MUOKATTAVA SISÄLTÖ: Navigaation valikkolinkit] 
+                 Ohje: Voit muuttaa tai lisätä sivujen polkuja tarpeen mukaan (esim. toinen sivusto saattaa vaatia eri alasivuja). -->
+            <nav class="nav-menu">
+                <a href="index.html">Etusivu</a>
+                <a href="meista.html">Meistä</a>
+                <a href="tarjonta.html">Tarjonta</a>
+                <a href="hinnasto.html">Hinnoittelu</a>
+                <a href="yhteystiedot.html">Yhteystiedot</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- PÄÄSISÄLTÖ: HERO-OSIO (Split-Layout) -->
+    <main class="hero-section">
+        <section class="hero-text-side">
+            
+            <!-- [MUOKATTAVA SISÄLTÖ: HERO-OTSIKKO JA PÄÄTEKSTIT] 
+                 Ohje: Vaihda pääotsikko (<h1>) ja leipäteksti (.lead-text) vastaamaan uuden yrityksen palvelulupausta. -->
+            <h1>Kaksi veljestä, valmiina auttamaan</h1>
+            <p class="lead-text">Olemme nuoret yritteliäät veljekset Porista. Perustimme kesäyrityksen tarjotaksemme reipasta ja luotettavaa apua sitä tarvitseville sekä oppiaksemme yrittäjyyttä käytännön kautta. Teemme jokaisen työn ahkerasti parhaan kykymme mukaan. Kerro, mitä tarvitset, niin katsotaan yhdessä, voisimmeko avuksi.</p>
+            
+            <!-- [MUOKATTAVA SISÄLTÖ: Erityishuomautus / Etolaatikko] 
+                 Ohje: Jos yrityksellä on jokin erityinen kilpailuetu (esim. ennakkoperintärekisteri, takuu tai muu vastaava), muokkaa tätä laatikkoa tai poista se tarvittaessa kokonaan. -->
+            <div class="tax-highlight-box">
+                <h3>💡 Huomaa etu</h3>
+                <p>Meillä on Y-tunnus ja kuulumme <strong>ennakkoperintärekisteriin</strong>. Tämä tarkoittaa, että kaikki yksityisasiakkaamme voivat saada työstämme <strong> verotuksessa 40% kotitalousvähennyksen. </strong> </p>
+            </div>
+
+            <!-- [MUOKATTAVA SISÄLTÖ: Toimintakehoitus / CTA-painike] 
+                 Ohje: Muuta painikkeen teksti ja kohde-linkki (href) tarvittaessa (esim. suoraan ajanvaraukseen tai yhteydenottosivulle). -->
+            <a href="yhteystiedot.html" class="cta-button">Ota yhteyttä ja kysy lisää</a>
+            <!-- [/MUOKATTAVA SISÄLTÖ] -->
+        </section>
+
+        <!-- [MUOKATTAVA SISÄLTÖ: HERO-KUVA] 
+             Ohje: Vaihda kuvatiedosto uuden yrityksen toimintaan sopivaksi. 
+             Kuvasuhde- ja resoluutiosuositus: Vaakakuva (esim. suhde 4:3 tai 16:9), minimileveys 1200px terävän lopputuloksen takaamiseksi. 
+             Muista päivittää myös alt-teksti vastaamaan uutta kuvaa. -->
+        <section class="hero-image-side">
+            <img src="kuvat/hero.jpg" alt="Veljekset leikkaamassa aitaa">
+        </section>
+    </main>
+
+    <!-- [MUOKATTAVA SISÄLTÖ: ETUSIVUN LISÄSISÄLTÖ / ESITTELYTEKSTI] 
+         Ohje: Tähän voi lisätä vapaasti osioita (esim. nostoja palveluista tai asiakaspalautteita) tarpeen mukaan. -->
+    <section class="container readability-text">
+        
+    </section>
+
+    <!-- ALATUNNISTE (FOOTER) -->
+    <footer class="site-footer">
+        <!-- [MUOKATTAVA SISÄLTÖ: Alatunnisteen tekstit, vuosiluku ja yrityksen viralliset tiedot] 
+             Ohje: Päivitä tähän uuden yrityksen nimi, Y-tunnus sekä mahdolliset rekisteritiedot. -->
+        <p>&copy; 2026 Veljesten Kesäyritys</p>
+        <p>Y-tunnus: 3633500-5 | Ennakkoperintärekisterissä</p>
+    </footer>
+
+</body>
+</html>
